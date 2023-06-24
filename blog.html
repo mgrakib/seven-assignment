@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Quiz Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./index.js" defer></script>
+
+    <!-- You don't need to change noChange.js file. It's fine -->
+    <script src="./noChange.js" defer></script>
+    <!-- You don't need to change noChange.js file. It's fine -->
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              common: ["Rubik", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+<body>
+    <section class="p-10 m-10">
+        <ol class="list-decimal">
+            <li class="text-2xl mb-5">
+                <p class="font-bold">What is the difference between Filter, Find, Map, ForEach?</p>
+                <div>
+                    The both are method of An Array. But there has some difference among them.
+                    <ul class="list-disc ml-8">
+                        <li class="font-bold">
+                            Map --
+                            <p class="font-normal text-xl">When You want to do some thing with the each elemnt of an array and then you want to make a new array with new element. Then you can use any loop like - For loop. But Map will do the same task for you and Map will make your task easy. So you can say Map returns an new array.</p>
+                        </li>
+
+                        <li class="font-bold">
+                            ForEach --
+                            <p class="font-normal text-xl">When You want to do some thing with the each elemnt of an array but you don't want to get a new array but just only to show the result. Then you can use forEach. Remembar forEach function won't return anything but you can do console log it.</p>
+                        </li>
+
+                        <li class="font-bold">
+                            Filter --
+                            <p class="font-normal text-xl">Filter is also a method of an array. If you want to make a new array but dependents on any condition then you must have to filter method. Filter also returns new array but depending on any condition.</p>
+                        </li>
+
+
+                         <li class="font-bold">
+                            Find --
+                            <p class="font-normal text-xl">When you want to get a specific element of an array by depending on any condition then you can't use filter or map. You have to use Find Metod. Look, Find is a method of an array it returns just onley one element which one can full fill condition. if many elements will full fill the condtion still Find will retrun just First Element.</p>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="text-2xl bg-5">
+                <p class="font-bold">What is the difference between LocalStorage, SessionStorage and Cookies?</p>
+                <div>
+                    Both of them has some own method to set data and get data. like getItems(), setItems(), clear() etc. And you will be just allowed to store string data in this store.
+                    <ul class="list-disc ml-8">
+                        <li class="font-bold">
+                            LocalStorage --
+                            <p class="font-normal text-xl">Local storage will be available just for the same window of this browser. But Local Storage is permanent. If you don't delete it never it will be deleted. But it won't go to server side. It allows 10MB of data to be stored.</p>
+                        </li>
+
+                        <li class="font-bold">
+                            SessionStorage --
+                            <p class="font-normal text-xl">SessionStorage also will be available just for the same windo of this borwser with that SessionStorage will run just for the session. Means when you will close the windo(tab) the data what is stored in SessionStorage that will be removed. So after closing the window you can't get the data again. It also won't go to server side. It allows 5MB of data to be stored.</p>
+                        </li>
+
+                        <li class="font-bold">
+                            Cookies --
+                            <p class="font-normal text-xl">
+                                The storage capacity is limited to 4KB of data.The data is sent with the request from the client to the server. If you want to set expire time to remove it you are free to do it.
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="text-2xl bg-5">
+                <p class="font-bold">What is the Event Loop?</p>
+                <div>
+                   We now JS is the singleThread Programing language. It's means JS execute code line by line. But If you want to do somethin at same time then you can't do it when your programing language is singleThread. For that Event loop helpes to JS to work as Multithread language.
+                   One concept called CallStack. Call stack is a LIFO(Last in First Out) data structure. It means which function will call at the last time this function will execute first time. When you call many function one after one. Function will wait to complete it's above function. After completing the above function then this function will be executed.
+                </div>
+
+            </li>
+        </ol>
+
+
+        <ul class="mt-10">
+            <li class="mb-10">
+                <span class="text-3xl font-bold">What is the purpose of quizTimer function?</span>
+                <p class="text-xl">যখন quizTimer ফাংশন টি কল করা হয় এবং এর প্যারামিটার হিসেবে Fasle আসে তখন setTimeInverval ফাংশনটা কল হয়। এর পর কাউন্ট এর মান কে 60 দিয়ে ভাগ করে মিনিটে কনভার্ট করা হয়। পরবর্তীতে তা আবার সেকেন্ড কনভারর্ট করে চেক করা হয় যে এদের কোন একটার লেস্থ 1 কিনা। অর্থৎ 10 এর নিচের সংখ্যাগুলোর বাম পাশে 0 যোগ করে দেওয়ার জন্য চেক করা হয়। পরে তা countHtml এ দেখানো হয়েছে। এবং কাউন্ড কে 1 করে বাড়ানো হয়েছে <br>
+                এর পর যখন কাউন্ট 60 এর বেশি হয়ে যাবে তখন ওয়ার্নিং হিসেবে যখন কাউন্ট টাকে 2 দিয়ে ভাগ করলে ভাগশেষ 0 হবে অর্থাৎ জোড় সংখ্যাগুলোর সময় গাড়ো লাল রং  দেখানো হয়েছে এবং বিজোড়ের সময় তা হালকা রং এ পরবির্তন করা হয়েছে।
+
+        
+                </p>
+
+            </li>
+
+            <li class="mb-10">
+                <span class="text-3xl font-bold">What is the purpose of chooseQuiz function?</span>
+                <p class="text-xl">যখন displayQuizOptions ফাংশন থেকে chooseQuiz ফাংশন কে onclick এর মাধ্যমে কল করা হচ্ছে তখন দুটি আরগুমেন্ট পাস করা হচ্চে পরবর্তীতে যা chooseQuiz এ প্যারামিটার হিসেবে রিসিভ হচ্ছে। প্যারামিটার এর প্রথম প্যারামিটার টি ইনডেক্স হিসেবে পরবর্তীতে ব্যবহার করা হয়েছে। এবং দ্বিতীয়টি বাছাইকৃত উত্তর হিসেবে। এরপর answers নামের অ্যারের মধ্যে ফাইন্ড মেথড ব্যবহার করে চেক করা হয়েছে যে, যে নাম্বার প্রশ্নের অপশন সিলেক্ট করা হয়েছে সেটা আগে থেকে সিলিক্ট করা আছে কিনা। যদি থাকে তবে আগের উত্তর টি splice এর মাধ্যমে রিমুভ করে নতুন জবাব এড করা হয়েছে। আর যদি আগে থেকে এই প্রশ্নের জবাব দেওয়া না থাকে তবে answers নামের অ্যারের মধ্যে পুশ পুরো অ্যারেটাকে কপি করা হচ্ছে যাতে এবং এর সাথে সিলেক্ট করা উত্তরটিও। পুশ এর মাধ্যমে কপি করার সময় spread ব্যবাহার করা হয়েছে যাতে রেফারেন্স কপি না হয়ে যা। সর্বশেষ displayAnswers ফাংশন কে পুনারায় কল করা হয়েছে। 
+
+                </p>
+
+            </li>
+        </ul>
+    </section>
+
+    
+</body>
+</html>
